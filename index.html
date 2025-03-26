@@ -46,14 +46,32 @@
             margin: 30px 0 15px;
         }
 
-        .timer-bar {
-            background-color: #ffffff;
-            padding: 30px 0;
-            text-align: center;
-            font-size: 1.8rem;
-            font-weight: 600;
-            border-bottom: 2px solid #eaeaea;
+
+        .countdown-grid {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
         }
+
+        .countdown-item {
+            background-color: #f2f2f2;
+            color: #1d2022;
+            border-radius: 10px;
+            padding: 15px;
+            width: 100px;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .countdown-number {
+            font-size: 2rem;
+            color: #00ABFF;
+        }
+
+
 
         .social-icons img {
             width: 32px;
@@ -74,18 +92,18 @@
 
 <!-- Logo -->
 <div class="text-center mt-4">
-    <img src="billeder4/Logo.png" alt="DMJU Logo" style="max-width: 200px;">
+    <img src="billeder4/Logo.png" alt="DMJU Logo" style="max-width: 200px; margin-bottom: 30px">
 </div>
 
 <!-- Top Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark px-4">
-    <a class="navbar-brand fw-bold text-white" href="#">DMJU</a>
+    <a class="navbar-brand fw-bold text-white" href="#">DANSK MODEL JERNBANE UNION</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav ms-auto align-items-center">
-            <li class="nav-item"><a class="nav-link" href="#">Events</a></li>
+            <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Konkurrencer</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Nyheder</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Om os</a></li>
@@ -97,102 +115,81 @@
 </nav>
 
 <!-- Countdown Timer Section -->
-<div class="timer-bar">
-    Messen starter om: <span id="countdown">Indlæser...</span>
+
+<h2 class="text-center mt-4">Messen starter om:</h2>
+<div class="countdown-grid" id="countdown">
+    <div class="countdown-item">
+        <div class="countdown-number" id="days">0</div>
+        <div>Dage</div>
+    </div>
+    <div class="countdown-item">
+        <div class="countdown-number" id="hours">0</div>
+        <div>Timer</div>
+    </div>
+    <div class="countdown-item">
+        <div class="countdown-number" id="minutes">0</div>
+        <div>Minutter</div>
+    </div>
+    <div class="countdown-item">
+        <div class="countdown-number" id="seconds">0</div>
+        <div>Sekunder</div>
+    </div>
 </div>
+
+
 
 <!-- Galleri -->
-<div class="container my-5">
-    <div class="section-title">Velkommen</div>
-    <div class="row g-4">
-        <!-- Billede 1 -->
-        <div class="col-md-4">
-            <div class="gallery-box" style="background-image: url('billeder4/billede1.jpg');" data-bs-toggle="modal" data-bs-target="#imageModal1"></div>
-        </div>
-        <!-- Billede 2 -->
-        <div class="col-md-4">
-            <div class="gallery-box" style="background-image: url('billeder4/billede2.jpg');" data-bs-toggle="modal" data-bs-target="#imageModal2"></div>
-        </div>
-        <!-- Billede 3 -->
-        <div class="col-md-4">
-            <div class="gallery-box" style="background-image: url('billeder4/billede3.jpg');" data-bs-toggle="modal" data-bs-target="#imageModal3"></div>
-        </div>
-        <!-- Billede 4 -->
-        <div class="col-md-4">
-            <div class="gallery-box" style="background-image: url('billeder4/billede4.jpg');" data-bs-toggle="modal" data-bs-target="#imageModal4"></div>
-        </div>
-        <!-- Billede 5 -->
-        <div class="col-md-4">
-            <div class="gallery-box" style="background-image: url('billeder4/billede5.jpg');" data-bs-toggle="modal" data-bs-target="#imageModal5"></div>
-        </div>
-        <!-- Billede 6 -->
-        <div class="col-md-4">
-            <div class="gallery-box" style="background-image: url('billeder4/billede6.jpg');" data-bs-toggle="modal" data-bs-target="#imageModal6"></div>
-        </div>
+<div class="row g-4">
+    <!-- Årets krus -->
+    <div class="col-md-4">
+        <a href="krus.html" class="text-decoration-none text-dark">
+            <div class="gallery-box" style="background-image: url('billeder4/billede1-1.jpeg');"></div>
+            <p class="mt-2 text-center fw-semibold">ÅRETS KRUS</p>
+        </a>
+    </div>
+
+    <!-- fotokonkurrence -->
+    <div class="col-md-4">
+        <a href="kalender.html" class="text-decoration-none text-dark">
+            <div class="gallery-box" style="background-image: url('billeder4/billede2-2.jpg');"></div>
+            <p class="mt-2 text-center fw-semibold">DMJU FOTOKONKURRENCE</p>
+        </a>
+    </div>
+
+    <!-- klubdatabasen -->
+    <div class="col-md-4">
+        <a href="nyheder.html" class="text-decoration-none text-dark">
+            <div class="gallery-box" style="background-image: url('billeder4/billede3.jpg');"></div>
+            <p class="mt-2 text-center fw-semibold">KLUBDATABASEN</p>
+        </a>
+    </div>
+
+    <!-- messer -->
+    <div class="col-md-4">
+        <a href="galleri.html" class="text-decoration-none text-dark">
+            <div class="gallery-box" style="background-image: url('billeder4/billede4-4.jpg');"></div>
+            <p class="mt-2 text-center fw-semibold">MESSER</p>
+        </a>
+    </div>
+
+    <!-- Links -->
+    <div class="col-md-4">
+        <a href="konkurrencer.html" class="text-decoration-none text-dark">
+            <div class="gallery-box" style="background-image: url('billeder4/billede5-5.jpg');"></div>
+            <p class="mt-2 text-center fw-semibold">LINKS</p>
+        </a>
+    </div>
+
+    <!-- OKvognen -->
+    <div class="col-md-4">
+        <a href="kontakt.html" class="text-decoration-none text-dark">
+            <div class="gallery-box" style="background-image: url('billeder4/billede6-6.jpg');"></div>
+            <p class="mt-2 text-center fw-semibold">DMJU'S HJÆLPEVOGN</p>
+        </a>
     </div>
 </div>
 
-<!-- Modals til billeder -->
-<!-- Modal Template -->
-<div class="modal fade" id="imageModal1" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-            <div class="modal-body p-0">
-                <img src="img/billede1.jpg" alt="Galleri billede" class="img-fluid w-100">
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="modal fade" id="imageModal2" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-            <div class="modal-body p-0">
-                <img src="img/billede2.jpg" alt="Galleri billede" class="img-fluid w-100">
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="imageModal3" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-            <div class="modal-body p-0">
-                <img src="img/billede3.jpg" alt="Galleri billede" class="img-fluid w-100">
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="imageModal4" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-            <div class="modal-body p-0">
-                <img src="img/billede4.jpg" alt="Galleri billede" class="img-fluid w-100">
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="imageModal5" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-            <div class="modal-body p-0">
-                <img src="img/billede5.jpg" alt="Galleri billede" class="img-fluid w-100">
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="imageModal6" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-            <div class="modal-body p-0">
-                <img src="img/billede6.jpg" alt="Galleri billede" class="img-fluid w-100">
-            </div>
-        </div>
-    </div>
-</div>
 
 <!-- Footer -->
 <footer class="footer text-center">
@@ -216,7 +213,6 @@
 
 <!-- Countdown Timer Script -->
 <script>
-    const countdown = document.getElementById("countdown");
     const targetDate = new Date("March 29, 2025 10:00:00").getTime();
 
     function updateTimer() {
@@ -224,7 +220,7 @@
         const distance = targetDate - now;
 
         if (distance < 0) {
-            countdown.innerHTML = "Messen er i gang!";
+            document.getElementById("countdown").innerHTML = "Messen er i gang!";
             return;
         }
 
@@ -233,11 +229,15 @@
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        countdown.innerHTML = `${days} dage, ${hours} timer, ${minutes} min, ${seconds} sek`;
+        document.getElementById("days").innerHTML = days;
+        document.getElementById("hours").innerHTML = hours;
+        document.getElementById("minutes").innerHTML = minutes;
+        document.getElementById("seconds").innerHTML = seconds;
     }
 
     setInterval(updateTimer, 1000);
     updateTimer();
+
 </script>
 
 </body>
