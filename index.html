@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DMJU – Forside</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffffff;
+        }
+
+        .navbar {
+            background-color: #00ABFF;
+        }
+
+        .footer {
+            background-color: #1d2022;
+            color: white;
+            padding: 30px 0;
+        }
+
+        .gallery-box {
+            height: 200px;
+            border-radius: 8px;
+            cursor: pointer;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .gallery-box:hover {
+            transform: scale(1.03);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 30px 0 15px;
+        }
+
+        .timer-bar {
+            background-color: #ffffff;
+            padding: 30px 0;
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 600;
+            border-bottom: 2px solid #eaeaea;
+        }
+
+        .social-icons img {
+            width: 32px;
+            margin-right: 10px;
+        }
+
+        a.nav-link {
+            color: white !important;
+            margin: 0 10px;
+        }
+
+        a.nav-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Top Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark px-4">
+    <a class="navbar-brand fw-bold text-white" href="#">DMJU</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item"><a class="nav-link" href="#">Events</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Konkurrencer</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Nyheder</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Om os</a></li>
+            <li class="nav-item">
+                <button class="btn btn-dark ms-2">Søg</button>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Logo -->
+<div class="text-center mt-4">
+    <img src="billeder4/Logo.png" alt="DMJU Logo" style="max-width: 200px;">
+</div>
+
+
+
+
+<!-- Countdown Timer Section -->
+<div class="timer-bar">
+    Messen starter om: <span id="countdown">Indlæser...</span>
+</div>
+
+<!-- Galleri -->
+<div class="container my-5">
+    <div class="section-title">Velkommen</div>
+    <div class="row g-4">
+        <!-- Billede 1 -->
+        <div class="col-md-4">
+            <div class="gallery-box" style="background-image: url('billeder4/billede1.jpg');" data-bs-toggle="modal" data-bs-target="#imageModal1"></div>
+        </div>
+        <!-- Billede 2 -->
+        <div class="col-md-4">
+            <div class="gallery-box" style="background-image: url('billeder4/billede2.jpg');" data-bs-toggle="modal" data-bs-target="#imageModal2"></div>
+        </div>
+        <!-- Billede 3 -->
+        <div class="col-md-4">
+            <div class="gallery-box" style="background-image: url('billeder4/billede3.jpg');" data-bs-toggle="modal" data-bs-target="#imageModal3"></div>
+        </div>
+        <!-- Billede 4 -->
+        <div class="col-md-4">
+            <div class="gallery-box" style="background-image: url('billeder4/billede4.jpg');" data-bs-toggle="modal" data-bs-target="#imageModal4"></div>
+        </div>
+        <!-- Billede 5 -->
+        <div class="col-md-4">
+            <div class="gallery-box" style="background-image: url('billeder4/billede5.jpg');" data-bs-toggle="modal" data-bs-target="#imageModal5"></div>
+        </div>
+        <!-- Billede 6 -->
+        <div class="col-md-4">
+            <div class="gallery-box" style="background-image: url('billeder4/billede6.jpg');" data-bs-toggle="modal" data-bs-target="#imageModal6"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Modals til billeder -->
+<!-- Modal Template -->
+<div class="modal fade" id="imageModal1" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-body p-0">
+                <img src="img/billede1.jpg" alt="Galleri billede" class="img-fluid w-100">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="imageModal2" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-body p-0">
+                <img src="img/billede2.jpg" alt="Galleri billede" class="img-fluid w-100">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="imageModal3" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-body p-0">
+                <img src="img/billede3.jpg" alt="Galleri billede" class="img-fluid w-100">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="imageModal4" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-body p-0">
+                <img src="img/billede4.jpg" alt="Galleri billede" class="img-fluid w-100">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="imageModal5" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-body p-0">
+                <img src="img/billede5.jpg" alt="Galleri billede" class="img-fluid w-100">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="imageModal6" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-body p-0">
+                <img src="img/billede6.jpg" alt="Galleri billede" class="img-fluid w-100">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer text-center">
+    <div class="container">
+        <p>Information</p>
+        <p>
+            Om os <br>
+            Kontakt <br>
+            DMJU's persondata politik <br>
+            Organisation | DMJU
+        </p>
+        <div class="social-icons mt-3">
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" /></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" /></a>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Countdown Timer Script -->
+<script>
+    const countdown = document.getElementById("countdown");
+    const targetDate = new Date("March 29, 2025 10:00:00").getTime();
+
+    function updateTimer() {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        if (distance < 0) {
+            countdown.innerHTML = "Messen er i gang!";
+            return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        countdown.innerHTML = `${days} dage, ${hours} timer, ${minutes} min, ${seconds} sek`;
+    }
+
+    setInterval(updateTimer, 1000);
+    updateTimer();
+</script>
+
+</body>
+</html>
